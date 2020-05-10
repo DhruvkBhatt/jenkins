@@ -2,10 +2,9 @@ pipeline {
    agent any
 
    stages {
-      stage('Build') {
-         steps {
-            echo 'building form jenkin-pipeline..'
-         }
+      stage('Running addition') {
+         sh './add_two_number 1 2'
+         echo 'building form jenkin-pipeline..'
       }
       stage('Test') {
          steps {
