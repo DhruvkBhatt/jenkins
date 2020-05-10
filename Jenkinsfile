@@ -3,8 +3,10 @@ pipeline {
 
    stages {
       stage('Running addition') {
+         steps{
          sh './add_two_number 1 2'
          echo 'building form jenkin-pipeline..'
+         }
       }
       stage('Test') {
          steps {
