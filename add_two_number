@@ -1,4 +1,6 @@
 #!/bin/bash
+Number1=$0
+Number2=$1
 sum=$[Number1+Number2]
 echo "$Number1+$Number2= $sum"
 
