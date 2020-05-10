@@ -4,6 +4,7 @@ pipeline {
    stages {
       stage('Running addition') {
          steps{
+         sh './chmode +x ./add_two_number'
          sh './add_two_number 1 2'
          echo 'building form jenkin-pipeline..'
          }
