@@ -11,8 +11,8 @@ pipeline {
       }
       stage('Running Java code') {
          steps {
-            sh 'java HelloWorld'
             echo 'Running..'
+            sh 'java HelloWorld'
          }
       }
    }
