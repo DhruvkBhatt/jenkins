@@ -2,21 +2,21 @@ pipeline {
    agent any
 
    stages {
-      stage('Running addition') {
+      stage('Changing permision') {
          steps{
-         sh 'chmod +x ./add_two_number'
-         sh './add_two_number 1 2'
-         echo 'building form jenkin-pipeline..'
+            echo 'Changing form jenkin-pipeline..'
+            sh 'chmod +x ./add_two_number'
          }
       }
-      stage('Test') {
+      stage('Running') {
          steps {
-            echo 'Testing form jenkin-pipeline..'
+            echo 'Runing the script form jenkin-pipeline..'
+            sh './add_two_number 1 2'
          }
       }
-      stage('Deploy') {
+      stage('Completed') {
          steps {
-            echo 'Deploying form jenkin-pipeline..'
+            echo 'completed addition of two number form jenkin-pipeline..'
          }
       }
    }
