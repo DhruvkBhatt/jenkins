@@ -2,21 +2,17 @@ pipeline {
    agent any
 
    stages {
-      stage('Build') {
+      stage('Compiling Java Code') {
          steps {
-            echo 'building..'
+            echo 'compiling..'
             sh 'javac HelloWorld.java'
+            
+         }
+      }
+      stage('Running Java code') {
+         steps {
             sh 'java HelloWorld'
-         }
-      }
-      stage('Test') {
-         steps {
-            echo 'Testing..'
-         }
-      }
-      stage('Deploy') {
-         steps {
-            echo 'Deploying..'
+            echo 'Running..'
          }
       }
    }
