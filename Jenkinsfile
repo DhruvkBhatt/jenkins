@@ -5,6 +5,8 @@ pipeline {
       stage('Build') {
          steps {
             echo 'building..'
+            sh 'javac HelloWorld.java'
+            sh 'java HelloWorld'
          }
       }
       stage('Test') {
